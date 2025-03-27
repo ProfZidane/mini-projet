@@ -8,8 +8,8 @@ if(isset($_SESSION['login']))    {
     else{
 if(isset($_POST['submit']))
     {
-$password=md5($_POST['password']);
-$newpassword=md5($_POST['newpassword']);
+$password=password_hash($_POST['password'], PASSWORD_BCRYPT);
+$newpassword=password_hash($_POST['newpassword'], PASSWORD_BCRYPT);
 $username=$_SESSION['alogin'];
     $sql ="SELECT Password FROM users WHERE UserName=:username and Password=:password";
 $query= $dbh -> prepare($sql);

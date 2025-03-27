@@ -11,7 +11,7 @@ $dbh = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME,DB_USER, DB_PASS,array(P
 }
 catch (PDOException $e)
 {
-exit("Error: " . $e->getMessage());
+exit("Error: " . "Désolé nous ne pouvons pas comprendre votre requete");
 }
 
 $dbh1 = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
