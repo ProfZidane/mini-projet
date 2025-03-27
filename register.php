@@ -1,7 +1,7 @@
 <?php
    session_start();
    error_reporting(1);
-   include('includes/config.php');
+   include_once('includes/config.php');
    
    // Générer un token CSRF pour protéger le formulaire
    if (empty($_SESSION['csrf_token'])) {
@@ -69,10 +69,10 @@
                                     </div>
                                  </div>
                                  <?php if (isset($_GET["msgErreur"])) { ?>
-                                    <p class="error-message"><?php echo $_GET["msgErreur"]; ?></p><br><br>
+                                    <p class="error-message"><?php echo htmlspecialchars($_GET["msgErreur"]); ?></p><br><br>
                                  <?php } ?>
                                  <?php if (isset($_GET["msgSucces"])) { ?>
-                                    <p class="success-message"><?php echo $_GET["msgSucces"]; ?></p><br><br>
+                                    <p class="success-message"><?php echo htmlspecialchars($_GET["msgSucces"]); ?></p><br><br>
                                     <script type="text/javascript">
                                           // JavaScript to redirect the user after 15 seconds
                                           setTimeout(function() {

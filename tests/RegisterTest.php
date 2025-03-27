@@ -4,10 +4,11 @@ use PHPUnit\Framework\TestCase;
 
 class RegisterTest extends TestCase
 {
-    // Test que l'email n'est pas vide
+    const EMAIL = 'test@example.com'; 
+
     public function testEmailNotEmpty()
     {
-        $email = "test@example.com"; // Email valide
+        $email = RegisterTest::EMAIL; // Email valide
         $this->assertTrue($this->validateEmailNotEmpty($email), "L'email ne doit pas être vide.");
     }
 
@@ -20,7 +21,7 @@ class RegisterTest extends TestCase
     // Test que l'email est dans un format valide
     public function testValidEmailFormat()
     {
-        $email = "test@example.com"; // Email valide
+        $email = RegisterTest::EMAIL; // Email valide
         $this->assertTrue($this->validateEmailFormat($email), "L'email est au bon format.");
     }
 
@@ -49,7 +50,7 @@ class RegisterTest extends TestCase
     public function testFieldsNotEmpty()
     {
         $username = "validUser123";
-        $email = "test@example.com";
+        $email = RegisterTest::EMAIL;
         $password = "testPassword123";
         $confirmPassword = "testPassword123";
 
@@ -60,7 +61,7 @@ class RegisterTest extends TestCase
     public function testFieldsEmpty()
     {
         $username = "";
-        $email = "test@example.com";
+        $email = RegisterTest::EMAIL;
         $password = "testPassword123";
         $confirmPassword = "testPassword123";
 
@@ -94,4 +95,4 @@ class RegisterTest extends TestCase
         return !empty($username) && !empty($email) && !empty($password) && !empty($confirmPassword);
     }
 }
-?>
+
