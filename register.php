@@ -1,7 +1,7 @@
 <?php
    session_start();
    error_reporting(1);
-   include('includes/config.php');
+   include_once('includes/config.php');
    
    // Générer un token CSRF pour protéger le formulaire
    if (empty($_SESSION['csrf_token'])) {
