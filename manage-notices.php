@@ -3,21 +3,20 @@
 session_start();
 error_reporting(0);
 include('includes/config.php');
+
 if(strlen($_SESSION['alogin'])==""){   
-header("Location: index.php"); 
-}else{
+    header("Location: index.php"); 
+} else {
 //For Deleting the notice
 
-if($_GET['id'])
-{
-$id=$_GET['id'];
-$sql="delete from tblnotice where id=:id";
-$query = $dbh->prepare($sql);
-$query->bindParam(':id',$id,PDO::PARAM_STR);
-$query->execute();
-echo '<script>alert("Notice deleted.")</script>';
-echo "<script>window.location.href ='manage-notices.php'</script>";
-
+if($_GET['id']) {
+    $id=$_GET['id'];
+    $sql="delete from tblnotice where id=:id";
+    $query = $dbh->prepare($sql);
+    $query->bindParam(':id',$id,PDO::PARAM_STR);
+    $query->execute();
+    echo '<script>alert("Notice deleted.")</script>';
+    echo "<script>window.location.href ='manage-notices.php'</script>";
 }
 
 ?>
