@@ -39,7 +39,7 @@ $results1=$query1->fetchAll(PDO::FETCH_OBJ);
 $totalstudents=$query1->rowCount();
 ?>
 <span class="bg-icon"><i class="fa fa-users"></i></span>
-                                            <span class="number counter"><?php echo htmlentities($totalstudents);?></span>
+                                            <span class="number counter"><?php print htmlentities($totalstudents);?></span>
                                             <span class="name">Les étudiants</span>
                                             
                                         </a>
@@ -57,7 +57,7 @@ $results=$query->fetchAll(PDO::FETCH_OBJ);
 $totalsubjects=$query->rowCount();
 ?>
  <span class="bg-icon"><i class="fa fa-ticket"></i></span>
-                                            <span class="number counter"><?php echo htmlentities($totalsubjects);?></span>
+                                            <span class="number counter"><?php print htmlentities($totalsubjects);?></span>
                                             <span class="name">Les cours</span>
                                            
                                         </a>

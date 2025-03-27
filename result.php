@@ -69,9 +69,9 @@ if($stmt->rowCount() > 0)
 {
 foreach($resultss as $row)
 {   ?>
-<p><b>Nom de l'étudiant:</b> <?php echo htmlentities($row->StudentName);?></p>
-<p><b>Numéro de l'étudiant :</b> <?php echo htmlentities($row->RollId);?>
-<p><b>Classe de l'étudiant:</b> <?php echo htmlentities($row->ClassName);?>(<?php echo htmlentities($row->Section);?>)
+<p><b>Nom de l'étudiant:</b> <?php print htmlentities($row->StudentName);?></p>
+<p><b>Numéro de l'étudiant :</b> <?php print htmlentities($row->RollId);?>
+<p><b>Classe de l'étudiant:</b> <?php print htmlentities($row->ClassName);?>(<?php print htmlentities($row->Section);?>)
 <?php }
 
     ?>
@@ -114,9 +114,9 @@ foreach($results as $result){
     ?>
 
                                                 		<tr>
-<th scope="row" style="text-align: center"><?php echo htmlentities($cnt);?></th>
-<td style="text-align: center"><?php echo htmlentities($result->SubjectName);?></td>
-<td style="text-align: center"><?php echo htmlentities($totalmarks=$result->marks);?></td>
+<th scope="row" style="text-align: center"><?php print htmlentities($cnt);?></th>
+<td style="text-align: center"><?php print htmlentities($result->SubjectName);?></td>
+<td style="text-align: center"><?php print htmlentities($totalmarks=$result->marks);?></td>
                                                 		</tr>
 <?php 
 $totlcount+=$totalmarks;
@@ -124,11 +124,11 @@ $cnt++;}
 ?>
 <tr>
 <th scope="row" colspan="2" style="text-align: center">Total Marks</th>
-<td style="text-align: center"><b><?php echo htmlentities($totlcount); ?></b> out of <b><?php echo htmlentities($outof=($cnt-1)*100); ?></b></td>
+<td style="text-align: center"><b><?php print htmlentities($totlcount); ?></b> out of <b><?php print htmlentities($outof=($cnt-1)*100); ?></b></td>
                                                         </tr>
 <tr>
 <th scope="row" colspan="2" style="text-align: center">Percntage</th>           
-<td style="text-align: center"><b><?php echo  htmlentities($totlcount*(100)/$outof); ?> %</b></td>
+<td style="text-align: center"><b><?php print  htmlentities($totlcount*(100)/$outof); ?> %</b></td>
 </tr>
 
 <tr>
@@ -149,7 +149,7 @@ $cnt++;}
 <div class="alert alert-danger left-icon-alert" role="alert">
 strong>Oh snap!</strong>
 <?php
-echo htmlentities("Invalid Roll Id");
+print htmlentities("Invalid Roll Id");
  }
 ?>
                                         </div>

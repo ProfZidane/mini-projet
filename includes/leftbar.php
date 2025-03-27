@@ -4,7 +4,11 @@
                         <div class="sidebar-content">
                             <div class="user-info">
                                 <img src="assets/images/avatar.jfif" alt="Profile" class="img-circle profile-img" width="40px">
-                                <p style="color: white;"><?php echo $_SESSION['alogin']; ?></p>
+                                <p style="color: white;">
+                                    <?php if (isset($_SESSION["alogin"])) { 
+                                        echo $_SESSION['alogin']; 
+                                    }?>
+                                </p>
                             </div>
                             <!-- /.user-info -->
 
@@ -38,7 +42,7 @@
                                             <li><a href="manage-results.php"><i class="fa fa-bars"></i> <span>Gérer Les Résultats</span></a></li>
                                            
                                         </ul>        </li>
-<?php if ($_SESSION["is_admin"]) { ?>
+<?php if (isset($_SESSION["is_admin"])) { ?>
                                     <li class="has-children">
                                         <a href="#"><i class="fa fa-file-text"></i> <span>Les Classes</span> <i class="fa fa-angle-right arrow"></i></a>
                                         <ul class="child-nav">
