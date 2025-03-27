@@ -81,7 +81,7 @@ if (isset($_POST['login'])) {
                                     <div class="panel login-box" style="background: #172541;">
                                         <div class="panel-heading">
                                             <div class="text-center"><br>
-                                                <a href="#"><img style="height: 70px" src="assets/images/footer-logo.png"></a><br>
+                                                <a href="#"><img style="height: 70px" src="assets/images/footer-logo.png" alt="footer"></a><br>
                                                 <h3 style="color: white;"> <strong>Login</strong></h3>
                                             </div>
                                         </div>

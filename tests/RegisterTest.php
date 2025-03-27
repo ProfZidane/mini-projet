@@ -4,7 +4,7 @@ use PHPUnit\Framework\TestCase;
 
 class RegisterTest extends TestCase
 {
-    const EMAIL = 'test@example.com'; 
+    const EMAIL = 'test@example.com';
 
     public function testEmailNotEmpty()
     {
