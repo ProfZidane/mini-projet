@@ -12,13 +12,12 @@ jobs:
       - name: Installer PHP et Composer
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.1'
+          php-version: '7.3'  # Use PHP 7.3 as per your config
           extensions: mbstring, pdo, pdo_mysql
-          tools: composer, phpunit
+          tools: composer:1.8.6, phpunit  # Use Composer 1.8.6
 
       - name: Installer les dépendances
         run: composer install --no-interaction --prefer-dist
 
       - name: Exécuter les tests avec PHPUnit
         run: vendor/bin/phpunit tests/
-
