@@ -1,0 +1,16 @@
+# Ignorer le dossier des dépendances Composer
+/vendor/
+
+# Ignorer les fichiers de logs et temporaires
+*.log
+/tmp/
+
+# Ignorer les fichiers spécifiques à l'IDE
+/.vscode/
+/.idea/
+
+# Ignorer les fichiers de cache PHP
+/cache/
+
+# Ignorer les fichiers de configuration personnels
+.env
